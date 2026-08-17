@@ -1,0 +1,18 @@
+{
+  "protocol": "USSD-UI",
+  "version": "0.1",
+  "type": "screen",
+  "sessionId": "demo-001",
+  "screen": {
+    "id": "data-plans",
+    "title": "Data Plans",
+    "components": [
+      { "type": "button", "id": "plan_1gb", "label": "1GB    ₦500", "action": "purchase_data", "data": { "plan": "1gb", "label": "1GB", "amount": 500 } },
+      { "type": "button", "id": "plan_2.5gb", "label": "2.5GB    ₦1,000", "action": "purchase_data", "data": { "plan": "2.5gb", "label": "2.5GB", "amount": 1000 } },
+      { "type": "button", "id": "plan_6.5gb", "label": "6.5GB    ₦1,500", "action": "purchase_data", "data": { "plan": "6.5gb", "label": "6.5GB", "amount": 1500 } },
+      { "type": "button", "id": "plan_17gb", "label": "17GB    ₦4,000", "action": "purchase_data", "data": { "plan": "17gb", "label": "17GB", "amount": 4000 } },
+      { "type": "button", "id": "custom_data", "label": "Custom Amount", "action": "open_custom_input_data" }
+    ],
+    "navigation": { "back": true, "home": true, "cancel": true }
+  }
+}

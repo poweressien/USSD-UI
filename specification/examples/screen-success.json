@@ -1,0 +1,22 @@
+{
+  "protocol": "USSD-UI",
+  "version": "0.1",
+  "type": "screen",
+  "sessionId": "demo-001",
+  "screen": {
+    "id": "success",
+    "title": "Transaction Successful ✓",
+    "components": [
+      {
+        "type": "success",
+        "id": "success",
+        "heading": "6.5GB activated",
+        "rows": [{ "label": "Amount", "value": "₦1,500" }],
+        "reference": "USSD260813001"
+      },
+      { "type": "button", "id": "done", "label": "Done", "action": "go_home" },
+      { "type": "button", "id": "return_home", "label": "Return Home", "action": "go_home" }
+    ],
+    "navigation": { "back": false, "home": true, "cancel": false }
+  }
+}

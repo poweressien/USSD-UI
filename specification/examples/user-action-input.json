@@ -1,0 +1,6 @@
+{
+  "type": "input",
+  "id": "custom_amount_data",
+  "action": "submit_custom_amount_data",
+  "value": "2500"
+}

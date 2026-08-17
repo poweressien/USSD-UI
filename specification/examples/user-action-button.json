@@ -1,0 +1,6 @@
+{
+  "type": "button",
+  "id": "plan_6.5gb",
+  "action": "purchase_data",
+  "data": { "plan": "6.5gb", "label": "6.5GB", "amount": 1500 }
+}

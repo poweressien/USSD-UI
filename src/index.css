@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Space Grotesk", ui-sans-serif, sans-serif;
+  --font-sans: "IBM Plex Sans", ui-sans-serif, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  /* Core surfaces — deep technical navy-charcoal, not pure black */
+  --color-bg: #10131a;
+  --color-surface: #181d27;
+  --color-surface-raised: #1f2530;
+  --color-border: #2a3140;
+  --color-border-strong: #3a4356;
+
+  /* Text */
+  --color-text: #edeff3;
+  --color-text-muted: #8b93a6;
+  --color-text-faint: #5b6478;
+
+  /* Accent — SIM-contact gold / signal amber, the "new layer" color */
+  --color-accent: #d9a441;
+  --color-accent-strong: #f0bc5c;
+  --color-accent-soft: #3a2f19;
+
+  /* Status */
+  --color-success: #4faf72;
+  --color-success-soft: #16261c;
+  --color-danger: #e2685d;
+  --color-danger-soft: #2a1917;
+  --color-info: #5b9fd0;
+  --color-info-soft: #182430;
+
+  /* Classic-USSD LCD palette — scoped to legacy-mode surfaces only */
+  --color-lcd: #b7c79b;
+  --color-lcd-dark: #a8ba88;
+  --color-lcd-text: #24301c;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    color-scheme: dark;
+  }
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+  ::selection {
+    background: var(--color-accent);
+    color: #1a1305;
+  }
+}
+
+@layer utilities {
+  /* Subtle pixel-grid texture over classic LCD surfaces, evoking a dot-matrix screen */
+  .lcd-grid {
+    background-image:
+      repeating-linear-gradient(0deg, rgba(36, 48, 28, 0.07) 0px, rgba(36, 48, 28, 0.07) 1px, transparent 1px, transparent 3px),
+      repeating-linear-gradient(90deg, rgba(36, 48, 28, 0.07) 0px, rgba(36, 48, 28, 0.07) 1px, transparent 1px, transparent 3px);
+  }
+  /* Fine schematic grid for technical/spec surfaces */
+  .schematic-grid {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

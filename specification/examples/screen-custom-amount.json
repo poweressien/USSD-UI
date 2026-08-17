@@ -1,0 +1,24 @@
+{
+  "protocol": "USSD-UI",
+  "version": "0.1",
+  "type": "screen",
+  "sessionId": "demo-001",
+  "screen": {
+    "id": "custom-amount-data",
+    "title": "Custom Amount",
+    "subtitle": "Data",
+    "components": [
+      {
+        "type": "input",
+        "id": "custom_amount_data",
+        "label": "Enter amount",
+        "kind": "currency",
+        "action": "submit_custom_amount_data",
+        "min": 50,
+        "max": 100000,
+        "placeholder": "0"
+      }
+    ],
+    "navigation": { "back": true, "home": true, "cancel": true }
+  }
+}

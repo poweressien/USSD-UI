@@ -1,0 +1,21 @@
+{
+  "protocol": "USSD-UI",
+  "version": "0.1",
+  "type": "screen",
+  "sessionId": "demo-001",
+  "screen": {
+    "id": "error",
+    "title": "Transaction Failed",
+    "components": [
+      {
+        "type": "error",
+        "id": "error",
+        "heading": "We could not complete this request.",
+        "reason": "Network unavailable."
+      },
+      { "type": "button", "id": "retry_btn", "label": "Retry", "action": "retry" },
+      { "type": "button", "id": "home_btn", "label": "Home", "action": "go_home" }
+    ],
+    "navigation": { "back": false, "home": true, "cancel": false, "retry": true }
+  }
+}

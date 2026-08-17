@@ -1,0 +1,12 @@
+{
+  "protocol": "USSD-UI",
+  "version": "2.0",
+  "type": "screen",
+  "sessionId": "demo-001",
+  "screen": {
+    "id": "home",
+    "title": "MTN Services",
+    "components": [{ "type": "button", "id": "menu_data", "label": "Data Plans", "action": "open_data_plans" }],
+    "navigation": { "back": false, "home": false, "cancel": true }
+  }
+}

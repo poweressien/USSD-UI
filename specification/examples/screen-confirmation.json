@@ -1,0 +1,26 @@
+{
+  "protocol": "USSD-UI",
+  "version": "0.1",
+  "type": "screen",
+  "sessionId": "demo-001",
+  "screen": {
+    "id": "confirmation",
+    "title": "Confirm Purchase",
+    "components": [
+      {
+        "type": "confirm",
+        "id": "confirm_purchase",
+        "rows": [
+          { "label": "Network", "value": "MTN" },
+          { "label": "Service", "value": "Data" },
+          { "label": "Plan", "value": "6.5GB" },
+          { "label": "Amount", "value": "₦1,500" },
+          { "label": "SIM", "value": "SIM 1" }
+        ],
+        "confirmAction": "confirm_purchase",
+        "cancelAction": "cancel"
+      }
+    ],
+    "navigation": { "back": true, "home": true, "cancel": true }
+  }
+}
